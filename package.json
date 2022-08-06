@@ -1,7 +1,7 @@
 {
   "name": "vue-toimc-admin",
   "private": true,
-  "version": "1.0.0-0",
+  "version": "1.0.0",
   "author": {
     "name": "toimc",
     "email": "brian@toimc.com",
@@ -126,6 +126,7 @@
     "rollup": "^2.77.0",
     "rollup-plugin-visualizer": "^5.7.1",
     "sass": "^1.54.0",
+    "standard-version": "^9.5.0",
     "stylelint": "^14.9.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-recess-order": "^3.0.0",
