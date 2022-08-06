@@ -1,5 +1,16 @@
 # Change Logs | 更新历史
 
+### [1.0.1](https://github.com/toimc-team/vue-toimc-admin/compare/v1.0.0...v1.0.1) (2022-08-06)
+
+### ✨ Features | 新功能
+
+- 添加 standard-version 与 release.yml 自动化 CI ([c19fd0e](https://github.com/toimc-team/vue-toimc-admin/commit/c19fd0ea4a3be470d260936c42db8353e1ec08d4))
+
+### 🐛 Bug Fixes | Bug 修复
+
+- glob import exclude private files ([074df5c](https://github.com/toimc-team/vue-toimc-admin/commit/074df5cf9aa9fc457cfaf1566c7bf34c96f6839b))
+- update pnpm-lock file, bump package.json ver ([67d7e68](https://github.com/toimc-team/vue-toimc-admin/commit/67d7e68f1688c6f7f5b220666eb001917df100af))
+
 ## 1.0.0 (2022-08-06)
 
 正式版本发布，文档站：https://toimc-team.github.io/vue3-toimc-admin-doc/
