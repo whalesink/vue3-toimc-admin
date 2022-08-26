@@ -146,3 +146,4 @@ dist-ssr
 components.d.ts
 
 report.html
+__snapshots__/

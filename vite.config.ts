@@ -188,6 +188,15 @@ export default defineConfig(({ mode, command }: ConfigEnv): UserConfig => {
         path: 'path-browserify'
         // dayjs: 'dayjs/esm'
       }
+    },
+    test: {
+      globals: true,
+      environment: 'happy-dom',
+      include: ['**/*.spec.(ts|tsx)', '**/*.test.(ts|tsx)'],
+      exclude: ['dist/**', 'build/**', 'mock/**', 'public'],
+      deps: {
+        inline: ['vue', 'vue-router', 'vuex', 'axios', 'element-plus']
+      }
     }
   }
 })
