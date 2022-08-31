@@ -1,6 +1,6 @@
 <template>
   <div class="p-4">
-    <el-card class="mb-2" shadow="false">
+    <el-card class="mb-2" shadow="never">
       <div class="flex items-center justify-between text-gray-600 text-sm pb-4">
         <div>
           <div class="inline pr-4">
@@ -10,8 +10,10 @@
                 >- Day</el-button
               >
               <el-button type="primary" @click="setDate(1, 'day')"
-                >+ Day<el-icon class="el-icon--right"><ArrowRight /></el-icon
-              ></el-button>
+                >+ Day<el-icon class="el-icon--right">
+                  <ArrowRight />
+                </el-icon>
+              </el-button>
             </el-button-group>
             <!-- position: center left right -->
           </div>
@@ -64,7 +66,7 @@
     showGzDay: boolean
     showDayCn: boolean
     border: boolean
-    size: 'small' | 'medium' | 'large'
+    size: 'small' | 'default' | 'large'
     inline: boolean
   }
 
@@ -203,7 +205,7 @@
         formSchema,
         form,
         updateForm,
-        toolList: computed(() =>
+        toolList: computed<IToolType[]>(() =>
           form.showTool ? ['prev-year', 'prev-month', 'today', 'next-month', 'next-year'] : []
         )
       }
