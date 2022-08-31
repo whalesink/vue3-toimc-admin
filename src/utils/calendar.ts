@@ -1,8 +1,75 @@
 /** @type {*}
  * https://github.com/jjonline/calendar.js/blob/master/calendar.js
  */
+export type FestivalType = {
+  [key: string]: { title: string }
+}
 
-const Calendar = {
+export type Solar2lunarType = {
+  date: string
+  lunarDate: string
+  festival: string | null
+  lunarFestival: string | null
+  lYear: number
+  lMonth: number
+  lDay: number
+  Animal: string
+  IMonthCn: string
+  IDayCn: string
+  cYear: number
+  cMonth: number
+  cDay: number
+  gzYear: string
+  gzMonth: string
+  gzDay: string
+  isToday: Boolean
+  isLeap: Boolean
+  nWeek: string
+  ncWeek: string
+  isTerm: Boolean
+  Term: string
+  astro: string
+}
+
+export interface CalendarType {
+  lunarInfo: number[]
+  solarMonth: number[]
+  Gan: string[]
+  Zhi: string[]
+  Animals: string[]
+  festival: FestivalType
+  lFestival: FestivalType
+  getFestival: () => FestivalType
+  getLunarFestival: () => FestivalType
+  setFestival: (any) => void
+  setLunarFestival: (any) => void
+  solarTerm: string[]
+  sTermInfo: string[]
+  nStr1: string[]
+  nStr2: string[]
+  nStr3: string[]
+  lYearDays: (string) => number
+  leapMonth: (string) => number
+  leapDays: (string) => number
+  monthDays: (y: number, m: number) => number
+  solarDays: (y: number, m: number) => number
+  toGanZhiYear: (y: number) => string
+  toAstro: (m: number, d: number) => string
+  toGanZhi: (d: number) => string
+  getTerm: (y: number, n: number) => number
+  toChinaMonth: (m: number) => string | number
+  toChinaDay: (d: number) => string
+  getAnimal: (y: number) => string
+  solar2lunar: (y: string | number, m: string | number, d: string | number) => Solar2lunarType
+  lunar2solar: (
+    y: string | number,
+    m: string | number,
+    d: string | number,
+    isLeap?: boolean
+  ) => Solar2lunarType
+}
+
+const Calendar: CalendarType = {
   /**
    * 农历1900-2100的润大小信息表
    * @Array Of Property
@@ -870,16 +937,16 @@ const Calendar = {
    * @eg:console.log(calendar.solar2lunar(1987,11,01));
    */
   solar2lunar: function (yPara, mPara, dPara) {
-    let y = parseInt(yPara)
-    let m = parseInt(mPara)
-    let d = parseInt(dPara)
+    let y = parseInt(yPara + '')
+    let m = parseInt(mPara + '')
+    let d = parseInt(dPara + '')
     //年份限定、上限
     if (y < 1900 || y > 2100) {
-      return -1 // undefined转换为数字变为NaN
+      return {} as Solar2lunarType // undefined转换为数字变为NaN
     }
     //公历传参最下限
     if (y === 1900 && m === 1 && d < 31) {
-      return -1
+      return {} as Solar2lunarType
     }
 
     //未传参  获得当天
@@ -1043,9 +1110,9 @@ const Calendar = {
    * @eg:console.log(calendar.lunar2solar(1987,9,10));
    */
   lunar2solar: function (y, m, d, isLeapMonth) {
-    y = parseInt(y)
-    m = parseInt(m)
-    d = parseInt(d)
+    y = parseInt(y + '')
+    m = parseInt(m + '')
+    d = parseInt(d + '')
     isLeapMonth = !!isLeapMonth
     const leapMonth = this.leapMonth(y)
     if (isLeapMonth && leapMonth !== m) {
@@ -1098,6 +1165,14 @@ const Calendar = {
     return this.solar2lunar(cY, cM, cD)
   }
 }
+// interface Solar2LunarType {
+//   cDay: string
+//   IDayCn: string
+//   gzDay: string
+//   astro: string
+//   [key: string]: any
+// }
+
 export function solar2lunar(val) {
   return Calendar.solar2lunar(val.split('-')[0], val.split('-')[1], val.split('-')[2])
 }

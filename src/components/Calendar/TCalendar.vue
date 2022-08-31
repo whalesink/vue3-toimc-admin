@@ -23,19 +23,17 @@
       <template #dateCell="{ data }">
         <slot name="dateCell" :data="data">
           <div :class="['h-full flex', wrapperCls]" @click="handleCellClick(data)">
-            <div class="c-day">{{( solar2lunar(data.day)as any).cDay }}</div>
+            <div class="c-day">{{ solar2lunar(data.day).cDay }}</div>
             <div class="addition">
-              <span
-                v-if="showDayCn"
-                :class="{ 'pr-2': showGzDay || showAstro }"
-                >{{ ( solar2lunar(data.day)as any).IDayCn }}</span
-              >
+              <span v-if="showDayCn" :class="{ 'pr-2': showGzDay || showAstro }">{{
+                solar2lunar(data.day).IDayCn
+              }}</span>
               <span>
                 <span v-if="showGzDay" class="pr-1">
-                  {{ ( solar2lunar(data.day)as any).gzDay }}
+                  {{ solar2lunar(data.day).gzDay }}
                 </span>
                 <span v-if="showAstro" class="<lg:hidden">
-                  {{ ( solar2lunar(data.day)as any).astro }}
+                  {{ solar2lunar(data.day).astro }}
                 </span>
               </span>
             </div>
