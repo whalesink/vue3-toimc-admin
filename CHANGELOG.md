@@ -1,5 +1,33 @@
 # Change Logs | 更新历史
 
+### [1.0.2](https://github.com/toimc-team/vue-toimc-admin/compare/v1.0.1...v1.0.2) (2022-09-18)
+
+### 📦 Chores | 其他更新
+
+- update package.json 依赖 ([59a0b56](https://github.com/toimc-team/vue-toimc-admin/commit/59a0b56aceba66d58f49d8b71e590a968c0afdfe))
+
+### ✅ Tests | 测试
+
+- add Icon and IconList test case ([35b45ed](https://github.com/toimc-team/vue-toimc-admin/commit/35b45ed2dd69ca4bbf3c80e4a8b5ad8e3497554b))
+- CalendarCard test case ([90cca8a](https://github.com/toimc-team/vue-toimc-admin/commit/90cca8ad4098f1f126c951c0fae6dab3747a3382))
+- TCalendar test case ([071f69f](https://github.com/toimc-team/vue-toimc-admin/commit/071f69ff84d6f0cc17f1fc17bd035ac371dd5b14))
+- update vitest config file ([c0d222b](https://github.com/toimc-team/vue-toimc-admin/commit/c0d222bde25ebdc0a57eb7584a9abbf835a78f7f))
+
+### ✨ Features | 新功能
+
+- update package.json depts ([1d325ac](https://github.com/toimc-team/vue-toimc-admin/commit/1d325ac278c95529d66a755fedd3f75562519322))
+
+### ♻ Code Refactoring | 代码重构
+
+- Calendar add types ([e5dc705](https://github.com/toimc-team/vue-toimc-admin/commit/e5dc70552cffb937656b3d90652b2e71b0a81a5e))
+- upgrade package.json ([be926d9](https://github.com/toimc-team/vue-toimc-admin/commit/be926d9c25474e009f0797e198c183d422e97bfd))
+
+### 🐛 Bug Fixes | Bug 修复
+
+- area choose props field cannot modify ([404c185](https://github.com/toimc-team/vue-toimc-admin/commit/404c185e1c9f495f9a405b8f49d518705b27ec6a))
+- element-plus components related updated ([11fe331](https://github.com/toimc-team/vue-toimc-admin/commit/11fe3314049a355ca7fad8a9bef8fb981f0a44b3))
+- menu api bug fix ([7611a5d](https://github.com/toimc-team/vue-toimc-admin/commit/7611a5ddfef8561cb68d66876b80e5f9452780ec))
+
 ### [1.0.1](https://github.com/toimc-team/vue-toimc-admin/compare/v1.0.0...v1.0.1) (2022-08-06)
 
 ### ✨ Features | 新功能

@@ -27,7 +27,6 @@ specifiers:
   '@milkdown/plugin-slash': 6.4.0
   '@milkdown/plugin-tooltip': 6.4.0
   '@milkdown/plugin-upload': 6.4.0
-  '@milkdown/preset-commonmark': 6.4.2
   '@milkdown/preset-gfm': 6.4.0
   '@milkdown/prose': 6.4.0
   '@milkdown/theme-nord': 6.4.0
@@ -144,7 +143,6 @@ dependencies:
   '@milkdown/plugin-slash': 6.4.0_frlckpa4dsjuqzdnfjjgbzazk4
   '@milkdown/plugin-tooltip': 6.4.0_frlckpa4dsjuqzdnfjjgbzazk4
   '@milkdown/plugin-upload': 6.4.0_frlckpa4dsjuqzdnfjjgbzazk4
-  '@milkdown/preset-commonmark': 6.4.2_frlckpa4dsjuqzdnfjjgbzazk4
   '@milkdown/preset-gfm': 6.4.0_p7wy2xjm3biuuibfpr2lg3r2pq
   '@milkdown/prose': 6.4.0
   '@milkdown/theme-nord': 6.4.0_frlckpa4dsjuqzdnfjjgbzazk4
