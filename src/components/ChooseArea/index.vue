@@ -2,7 +2,7 @@
   <div class="p-1">
     <el-select v-model="province" placeholder="请选择省份" class="mr-1" :clearable="clearable">
       <el-option
-        v-for="item in lists"
+        v-for="item in tmplists"
         :key="item.code"
         :value="item.code"
         :label="item.name"
@@ -52,7 +52,7 @@
       url: {
         type: String,
         default:
-          'https://github.91chi.fun/https://raw.githubusercontent.com/modood/Administrative-divisions-of-China/master/dist/pca.json'
+          'https://github.91chi.fun/https://raw.githubusercontent.com/modood/Administrative-divisions-of-China/master/dist/pca-code.json'
       },
       online: {
         type: Boolean,
@@ -70,12 +70,13 @@
     emits: ['change'],
     setup(props, { emit }) {
       const { lists, url, online, plain, value } = toRefs(props)
+      const newLists = ref([] as typeof allAreas)
 
       onBeforeMount(() => {
         online.value &&
           fetch(url.value)
             .then((res) => res.json())
-            .then((out) => (lists.value = out))
+            .then((out) => (newLists.value = out))
 
         if (value.value) {
           const { province: p, city: c, area: a } = value.value
@@ -133,6 +134,7 @@
       })
 
       return {
+        tmplists: computed(() => (online.value ? newLists.value : lists.value)),
         province,
         city,
         area,
