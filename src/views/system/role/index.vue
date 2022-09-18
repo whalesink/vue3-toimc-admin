@@ -34,10 +34,10 @@
         </div>
       </template>
       <template #action="{ row }">
-        <el-button type="text" @click="findUser(row)">用户</el-button>
+        <el-button link type="primary" @click="findUser(row)">用户</el-button>
         <el-dropdown @command="handleMoreCommand">
           <span class="el-dropdown-link ml-2">
-            <el-button type="text"
+            <el-button link type="primary"
               >更多<el-icon class="el-icon--right">
                 <arrow-down />
               </el-icon>
@@ -57,8 +57,8 @@
         <div class="mt-4 flex justify-end">
           <el-pagination
             v-model:currentPage="formData.pageNo"
+            v-model:page-size="formData.pageSize"
             background
-            :page-size="formData.pageSize"
             layout="prev, pager, next"
             :total="tableTotal"
             @current-change="handleCurrentChange"

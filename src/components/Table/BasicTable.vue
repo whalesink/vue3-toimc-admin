@@ -128,7 +128,7 @@
           :next-text="pagination.nextText"
           :disabled="pagination.disabled"
           :hide-on-single-page="pagination.hideOnSinglePage"
-          v-on="pagination.events"
+          v-on="pagination.events || {}"
         />
       </div>
     </slot>

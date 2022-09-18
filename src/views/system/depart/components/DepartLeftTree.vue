@@ -23,7 +23,7 @@
       <template #default>
         <template v-if="checkedKeys.length > 0">
           <span>已选中 {{ checkedKeys.length }} 条记录</span>
-          <a-divider type="vertical" />
+          <el-divider type="vertical" />
           <a @click="checkedKeys = []">清空</a>
         </template>
         <template v-else>

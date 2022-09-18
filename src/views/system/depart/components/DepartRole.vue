@@ -54,7 +54,8 @@
       //获取菜单列表
       const loadMenuTree = () => {
         getMenuList().then((res: HttpResponse) => {
-          treeData.value = res?.data
+          // 修复菜单数据 数据结构{total: 0, records: Array(number)}
+          treeData.value = res?.data?.records
         })
       }
 

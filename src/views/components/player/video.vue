@@ -24,22 +24,22 @@
       {
         sources: [
           {
-            src: 'http://localhost:2222/001.mp4',
+            src: 'https://toimc-online.obs.cn-east-3.myhuaweicloud.com/vue-toimc-admin/video/001.mp4',
             type: 'video/mp4'
           }
         ],
         title: '001.mp4'
       },
       {
-        src: 'http://localhost:2222/002.mp4',
+        src: 'https://toimc-online.obs.cn-east-3.myhuaweicloud.com/vue-toimc-admin/video/002.mp4',
         title: '002.mp4'
       },
       {
-        src: 'http://localhost:2222/003.mp4',
+        src: 'https://toimc-online.obs.cn-east-3.myhuaweicloud.com/vue-toimc-admin/video/003.mp4',
         title: '003.mp4'
       },
       {
-        src: 'http://localhost:2222/004.mp4',
+        src: 'https://toimc-online.obs.cn-east-3.myhuaweicloud.com/vue-toimc-admin/video/004.mp4',
         title: '004.mp4'
       }
     ]

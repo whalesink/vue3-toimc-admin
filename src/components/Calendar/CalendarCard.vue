@@ -17,7 +17,7 @@
       </div>
       <div v-show="showRight" ref="calendarWrapperRef" class="calendar-wrapper">
         <el-calendar ref="calendarRef">
-          <template #dateCell="{ data }">
+          <template #date-cell="{ data }">
             <div :style="{ margin: `${finalMargin}px 0` }">
               {{ data.cellMargin }}
               {{ dayjs(data.date).date() }}

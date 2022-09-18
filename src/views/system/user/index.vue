@@ -58,8 +58,12 @@
         <el-table-column property="status_dictText" label="状态" width="80" align="center" />
         <el-table-column label="操作" width="180" align="center">
           <template #default="scope">
-            <el-button type="text" size="small" @click="editUserInfo(scope.row)">编辑</el-button>
-            <el-button type="text" size="small" @click="resetPwd(scope.row)">密码</el-button>
+            <el-button link type="primary" size="small" @click="editUserInfo(scope.row)"
+              >编辑</el-button
+            >
+            <el-button link type="primary" size="small" @click="resetPwd(scope.row)"
+              >密码</el-button
+            >
 
             <!-- sys/user/frozenBatch -->
 
@@ -70,7 +74,7 @@
               @confirm="confirmFrozenEvent(scope.row)"
             >
               <template #reference>
-                <el-button type="text" size="small">冻结</el-button>
+                <el-button link type="primary" size="small">冻结</el-button>
               </template>
             </el-popconfirm>
 
@@ -81,7 +85,7 @@
               @confirm="confirmDelEvent(scope.row)"
             >
               <template #reference>
-                <el-button type="text" size="small">删除</el-button>
+                <el-button link type="primary" size="small">删除</el-button>
               </template>
             </el-popconfirm>
           </template>
@@ -92,8 +96,8 @@
       <div class="mt-4 flex justify-end">
         <el-pagination
           v-model:currentPage="formData.pageNo"
+          v-model:page-size="formData.pageSize"
           background
-          :page-size="formData.pageSize"
           layout="prev, pager, next"
           :total="tableTotal"
           @current-change="handleCurrentChange"

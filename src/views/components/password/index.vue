@@ -18,7 +18,12 @@
   </div>
 </template>
 
-<script lang="ts"></script>
+<script lang="ts">
+  export default defineComponent({
+    name: 'Password',
+    components: {}
+  })
+</script>
 
 <style lang="scss" scoped>
   .demo-wrap {

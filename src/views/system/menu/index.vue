@@ -38,7 +38,6 @@
       </div>
       <vxe-table
         ref="xTableRef"
-        stripe
         round
         border
         :loading="loading"
@@ -70,10 +69,10 @@
         <vxe-column field="sortNo" title="排序" min-width="50" align="center"></vxe-column>
         <vxe-column title="操作" min-width="150" align="center">
           <template #default="scope">
-            <el-button type="text" @click="handleEdit(scope.row)">编辑</el-button>
+            <el-button link type="primary" @click="handleEdit(scope.row)">编辑</el-button>
             <el-dropdown @command="handleMoreCommand">
               <span class="el-dropdown-link ml-2">
-                <el-button type="text"
+                <el-button link type="primary"
                   >更多<el-icon class="el-icon--right">
                     <arrow-down />
                   </el-icon>

@@ -1,6 +1,6 @@
 <template>
   <el-drawer :model-value="show" direction="rtl" size="604px" @close="onClose">
-    <template #title>
+    <template #header>
       <h4 class="divide-y divide-gray-500/50">
         <span>{{ user.id ? '编辑' : '新增' }}用户</span>
       </h4>

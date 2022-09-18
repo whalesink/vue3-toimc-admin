@@ -29,7 +29,7 @@
           label: '性别',
           field: '女',
           tag: {
-            type: 'primary'
+            type: 'success'
           }
         },
         {

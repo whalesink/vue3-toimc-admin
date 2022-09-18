@@ -51,6 +51,7 @@
         :component-style="simpleSetting"
         :text-position="simpleTextPosition"
       ></weather-simple>
+      <el-alert type="success" title="需要在程序中填入高德API key"></el-alert>
     </el-card>
   </div>
 </template>

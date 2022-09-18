@@ -28,7 +28,7 @@
       },
       // 大小，支持字符串，如22px
       size: {
-        type: String,
+        type: [String, Number],
         default: ''
       },
       // 类型，配合collection进行使用

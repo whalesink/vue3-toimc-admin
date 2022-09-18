@@ -38,9 +38,9 @@
         </div>
       </template>
       <template #action="{ row }">
-        <el-button type="text" @click="handleAction(1, row)">编辑</el-button>
-        <el-button type="text" @click="handleAction(2, row)">字典配置</el-button>
-        <el-button type="text" @click="handleAction(3, row)">删除</el-button>
+        <el-button link type="primary" @click="handleAction(1, row)">编辑</el-button>
+        <el-button link type="primary" @click="handleAction(2, row)">字典配置</el-button>
+        <el-button link type="primary" @click="handleAction(3, row)">删除</el-button>
       </template>
       <!-- 分页 -->
       <template #footer-with-pagination>

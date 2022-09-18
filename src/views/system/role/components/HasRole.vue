@@ -2,7 +2,7 @@
   <!--菜单组织机构树-->
 
   <el-drawer :model-value="showDrawer" direction="rtl" @close="onClose">
-    <template #title>
+    <template #header>
       <h4 class="divide-y divide-gray-500/50">角色权限配置</h4>
     </template>
     <div style="min-height: 360px">

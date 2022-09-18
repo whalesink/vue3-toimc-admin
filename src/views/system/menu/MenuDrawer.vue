@@ -1,6 +1,6 @@
 <template>
   <el-drawer v-model="show" :direction="direction" @close="onClose">
-    <template #title>
+    <template #header>
       <h4 class="divide-y divide-gray-500/50">{{ isUpdate ? '编辑菜单' : '新增菜单' }}</h4>
     </template>
     <template #default>

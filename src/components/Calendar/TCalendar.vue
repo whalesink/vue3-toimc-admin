@@ -20,8 +20,8 @@
           <div v-else></div>
         </slot>
       </template>
-      <template #dateCell="{ data }">
-        <slot name="dateCell" :data="data">
+      <template #date-cell="{ data }">
+        <slot name="date-cell" :data="data">
           <div :class="['h-full flex', wrapperCls]" @click="handleCellClick(data)">
             <div class="c-day">{{ solar2lunar(data.day).cDay }}</div>
             <div class="addition">

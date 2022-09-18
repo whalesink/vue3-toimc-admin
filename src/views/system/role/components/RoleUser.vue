@@ -1,6 +1,6 @@
 <template>
   <el-drawer :model-value="show" direction="rtl" size="930px" @close="onClose">
-    <template #title>
+    <template #header>
       <h4 class="divide-y divide-gray-500/50">角色用户【{{ roleId }}】</h4>
     </template>
     <template #default>
@@ -61,8 +61,8 @@
         <div class="mt-4 flex justify-end">
           <el-pagination
             v-model:currentPage="formData.pageNo"
+            v-model:page-size="formData.pageSize"
             background
-            :page-size="formData.pageSize"
             layout="prev, pager, next"
             :total="tableTotal"
             @current-change="handleCurrentChange"

@@ -1,6 +1,6 @@
 <template>
   <el-drawer :model-value="show" direction="rtl" size="930px" @close="onClose">
-    <template #title>
+    <template #header>
       <h4 class="divide-y divide-gray-500/50">字典列表【{{ dictId }}】</h4>
     </template>
     <template #default>
