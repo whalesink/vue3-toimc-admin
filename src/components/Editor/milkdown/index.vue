@@ -1,20 +1,22 @@
-<template> <VueEditor :editor="editor" /> </template>
+<template>
+  <VueEditor :editor="editor" />
+</template>
 
 <script lang="ts">
+  import { VueEditor, useEditor } from '@milkdown/vue'
   import { Editor, rootCtx, defaultValueCtx, createCmdKey } from '@milkdown/core'
   import { nord } from '@milkdown/theme-nord'
-  import { VueEditor, useEditor } from '@milkdown/vue'
+  import { listener, listenerCtx } from '@milkdown/plugin-listener'
   // import { commonmark } from '@milkdown/preset-commonmark'
+  import { emoji } from '@milkdown/plugin-emoji'
+  import { prism } from '@milkdown/plugin-prism'
   import { clipboard } from '@milkdown/plugin-clipboard'
   import { cursor } from '@milkdown/plugin-cursor'
   import { diagram } from '@milkdown/plugin-diagram'
-  import { emoji } from '@milkdown/plugin-emoji'
   import { history } from '@milkdown/plugin-history'
   import { indent } from '@milkdown/plugin-indent'
-  import { listener, listenerCtx } from '@milkdown/plugin-listener'
   import { math } from '@milkdown/plugin-math'
   import { menuPlugin } from '@milkdown/plugin-menu'
-  import { prism } from '@milkdown/plugin-prism'
   import { slash } from '@milkdown/plugin-slash'
   import { tooltip } from '@milkdown/plugin-tooltip'
   import { upload } from '@milkdown/plugin-upload'
@@ -47,7 +49,7 @@
 
       const enableKey = (type: MenuType): boolean => props.menu.includes(type)
 
-      const editor = useEditor((root) => {
+      const { editor } = useEditor((root) => {
         const instance = Editor.make()
           .config((ctx) => {
             ctx.set(rootCtx, root)
@@ -84,15 +86,15 @@
               })
           })
           .use(nord)
+          .use(emoji)
           .use(gfm)
           // .use(commonmark)
+          .use(prism)
           .use(clipboard)
           .use(cursor)
           .use(history)
-          .use(listener)
-          .use(emoji)
-          .use(prism)
           .use(indent)
+          .use(listener)
 
         enableKey('diagram') && instance.use(diagram)
         enableKey('tooltip') && instance.use(tooltip)
