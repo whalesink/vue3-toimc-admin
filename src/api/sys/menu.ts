@@ -11,7 +11,7 @@ enum Api {
  * @description: Get user menu based on id
  */
 
-export const getMenuList = (params) => {
+export const getMenuList = (params = {}) => {
   return new Promise((resolve) => {
     const headers = {
       authorization: 'Bearer ' + localStorage.getItem('token')

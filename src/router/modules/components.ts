@@ -207,7 +207,7 @@ const componentsRoutes: Array<AppRouteRecordRaw> = [
             name: 'StrengthMeter',
             path: 'password',
             meta: {
-              title: t('menu.component.password-comp.title')
+              title: t('menus.component.password-comp.title')
             },
             component: () => import('@/views/components/password/index.vue')
           }
