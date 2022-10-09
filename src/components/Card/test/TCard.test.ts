@@ -38,14 +38,14 @@ describe('TCard.vue', () => {
     await wrapper.setProps({ size: 'large' })
     expect(wrapper.classes('card-large')).toBe(true)
 
-    await wrapper.setProps({ tips: 'tips' })
+    await wrapper.setProps({ tips: { content: '这里是tips', placement: 'top' } })
     expect(wrapper.find('.el-tooltip__trigger').exists()).toBe(true)
 
     await wrapper.setProps({ layout: 'shadow' })
     expect(wrapper.find('.footer').exists()).toBe(false)
 
-    await wrapper.setProps({ tipsIcon: 'shadow' })
-    expect(wrapper.find('.footer').exists()).toBe(false)
+    await wrapper.setProps({ tipsIcon: 'ant-design:caret-up-filled' })
+    expect(wrapper.find('.header svg').exists()).toBe(true)
   })
 
   test('TCard slots should work ', async () => {

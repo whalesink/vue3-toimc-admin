@@ -123,6 +123,19 @@
       <p>内容</p>
       <p>内容</p>
     </t-card>
+    <t-card
+      header="test"
+      :tips="{ content: '这里是tips', placement: 'top' }"
+      collapse
+      tips-icon="ant-design:caret-down-outlined"
+    >
+      <p>自定义tipsIcon的icon</p>
+      <p>内容</p>
+      <p>内容</p>
+      <p>内容</p>
+      <p>内容</p>
+      <p>内容</p>
+    </t-card>
   </div>
 </template>
 
