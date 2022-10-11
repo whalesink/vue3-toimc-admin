@@ -31,7 +31,7 @@ Version requirements.
 Installed dependencies.
 
 ```
-# recommand
+# recommend
 pnpm i
 
 # or
