@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2
+      - uses: pnpm/action-setup@v2
         with:
-          version: 6.32.6
+          version: 7.14.1
       - uses: actions/setup-node@v3
         with:
           node-version: "14"
@@ -29,10 +29,10 @@ jobs:
           key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}
-            
+
       - name: Install Dependencies
         if: steps.pnpm-cache.outputs.cache-hit != 'true'
-        run: pnpm i
+        run: pnpm install --no-frozen-lockfile
 
       # Vite Build.
       - name: Generates Pages
@@ -45,8 +45,8 @@ jobs:
           branch: gh-pages
           folder: ./dist # The folder the action should deploy.
           ssh-key: ${{ secrets.GITEE_PRIVATE_KEY }}
-            
-      - name: Sync to Gitee 
+
+      - name: Sync to Gitee
         uses: wearerequired/git-mirror-action@master
         env:
           # 注意在 Settings->Secrets 配置 GITEE_PRIVATE_KEY
