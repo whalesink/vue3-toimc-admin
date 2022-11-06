@@ -89,7 +89,7 @@ npm run build
 ├── tsconfig.node.json
 ├── types
 ├── vite.config.ts
-└── windi.config.ts
+└── tailwind.config.ts
 ```
 
 ## Background and description
