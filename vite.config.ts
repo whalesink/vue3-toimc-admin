@@ -9,7 +9,6 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import { createHtmlPlugin } from 'vite-plugin-html'
-import WindiCSS from 'vite-plugin-windicss'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
@@ -100,7 +99,6 @@ export default defineConfig(({ mode, command }: ConfigEnv): UserConfig => {
     },
     plugins: [
       vue(),
-      WindiCSS(),
       AutoImport({
         imports: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head'],
         resolvers: [ElementPlusResolver()],

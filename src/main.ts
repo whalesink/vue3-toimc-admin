@@ -4,8 +4,6 @@ import App from './App.vue'
 // 全局样式
 import '@/assets/style/index.scss'
 
-// windicss setup
-import 'virtual:windi.css'
 // svg sprite setup
 import 'virtual:svg-icons-register'
 

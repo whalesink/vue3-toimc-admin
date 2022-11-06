@@ -85,9 +85,9 @@
           <template #footer>
             <div class="flex justify-between">
               <span>总量：{{ formatNumber(totalDownloads) }}</span>
-              <span
-                ><el-tag type="info">倒计时:{{ counter }}s</el-tag></span
-              >
+              <span>
+                <el-tag type="info">倒计时:{{ counter }}s</el-tag>
+              </span>
             </div>
           </template>
         </t-card>
@@ -321,8 +321,8 @@
           field: dependencies['element-plus']
         },
         {
-          label: 'windicss',
-          field: devDependencies['windicss']
+          label: 'tailwind',
+          field: devDependencies['tailwindcss']
         },
         {
           label: 'vitest',
