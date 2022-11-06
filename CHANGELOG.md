@@ -1,5 +1,52 @@
 # Change Logs | 更新历史
 
+## [1.1.0](https://github.com/toimc-team/vue-toimc-admin/compare/v1.0.1...v1.1.0) (2022-11-06)
+
+### ✨ Features | 新功能
+
+- update package.json depts ([1d325ac](https://github.com/toimc-team/vue-toimc-admin/commit/1d325ac278c95529d66a755fedd3f75562519322))
+
+### 📦 Chores | 其他更新
+
+- **release:** 1.0.2 ([1109ca2](https://github.com/toimc-team/vue-toimc-admin/commit/1109ca2c3e98e5774711192e2601e198991f0762))
+- update package.json 依赖 ([59a0b56](https://github.com/toimc-team/vue-toimc-admin/commit/59a0b56aceba66d58f49d8b71e590a968c0afdfe))
+
+### ✅ Tests | 测试
+
+- add AvatarList test case ([52fbe1f](https://github.com/toimc-team/vue-toimc-admin/commit/52fbe1f2272ef23dc01e69af991942b9e6d5ba8c))
+- add Icon and IconList test case ([35b45ed](https://github.com/toimc-team/vue-toimc-admin/commit/35b45ed2dd69ca4bbf3c80e4a8b5ad8e3497554b))
+- CalendarCard test case ([90cca8a](https://github.com/toimc-team/vue-toimc-admin/commit/90cca8ad4098f1f126c951c0fae6dab3747a3382))
+- DProgress test case ([718a6d0](https://github.com/toimc-team/vue-toimc-admin/commit/718a6d02fab2d566db17484f4cbbed14f62bfea6))
+- list test case ([839597f](https://github.com/toimc-team/vue-toimc-admin/commit/839597f334eec5c198ca0a3c6d0c9923282a5d68))
+- TCalendar test case ([071f69f](https://github.com/toimc-team/vue-toimc-admin/commit/071f69ff84d6f0cc17f1fc17bd035ac371dd5b14))
+- TCard test case ([a57ff29](https://github.com/toimc-team/vue-toimc-admin/commit/a57ff29fc8e09cf29831499c3adce85ed7fcb6ac))
+- TCard test suit ([cd86e5f](https://github.com/toimc-team/vue-toimc-admin/commit/cd86e5fe521c8fb62714014c2c0785a2962315bf))
+- TInput test case ([87d3144](https://github.com/toimc-team/vue-toimc-admin/commit/87d3144cc160c4f7dd19ec4b497dfd5ad0c4862d))
+- update vitest config file ([c0d222b](https://github.com/toimc-team/vue-toimc-admin/commit/c0d222bde25ebdc0a57eb7584a9abbf835a78f7f))
+
+### ♻ Code Refactoring | 代码重构
+
+- 切换成 tailwindcss ([dc5109b](https://github.com/toimc-team/vue-toimc-admin/commit/dc5109b83744e1a09cc80425accfb54ef2c11038))
+- Calendar add types ([e5dc705](https://github.com/toimc-team/vue-toimc-admin/commit/e5dc70552cffb937656b3d90652b2e71b0a81a5e))
+- update package.json version ([72fb570](https://github.com/toimc-team/vue-toimc-admin/commit/72fb570b7eccc8441b279405b9bd43859e3c5da9))
+- update vue vite version ([4a8c5a6](https://github.com/toimc-team/vue-toimc-admin/commit/4a8c5a6aeac701cf0ba64711c51b60bcef027550))
+- upgrade package.json ([de35e0f](https://github.com/toimc-team/vue-toimc-admin/commit/de35e0f92a464437898663fad2183625b820bc92))
+- upgrade package.json ([be926d9](https://github.com/toimc-team/vue-toimc-admin/commit/be926d9c25474e009f0797e198c183d422e97bfd))
+
+### 📝 Documentation | 文档
+
+- delete windi relate files ([488a147](https://github.com/toimc-team/vue-toimc-admin/commit/488a14767933534302567eeac82cba41a378c0f9))
+- fixed path error in README-zh_CN file ([f5ea9e5](https://github.com/toimc-team/vue-toimc-admin/commit/f5ea9e5bd1131d1a51b66167f1fc8603b05cb0d2))
+- fixed spelling mistakes ([5b43858](https://github.com/toimc-team/vue-toimc-admin/commit/5b43858ae92fb5dc2de18f0bba9d4b00cb6c6768))
+
+### 🐛 Bug Fixes | Bug 修复
+
+- 修正密码强度路由国际化显示问题 ([e1279a7](https://github.com/toimc-team/vue-toimc-admin/commit/e1279a7a0f02fcb5904b73d946fd6e8a5cd88cbe))
+- area choose props field cannot modify ([404c185](https://github.com/toimc-team/vue-toimc-admin/commit/404c185e1c9f495f9a405b8f49d518705b27ec6a))
+- element-plus components related updated ([11fe331](https://github.com/toimc-team/vue-toimc-admin/commit/11fe3314049a355ca7fad8a9bef8fb981f0a44b3))
+- menu api bug fix ([7611a5d](https://github.com/toimc-team/vue-toimc-admin/commit/7611a5ddfef8561cb68d66876b80e5f9452780ec))
+- tailwind form plugin & tailwind reactive css ([bd39474](https://github.com/toimc-team/vue-toimc-admin/commit/bd39474a4a816af8d363e8a8ce01f58219b081c8))
+
 ### [1.0.2](https://github.com/toimc-team/vue-toimc-admin/compare/v1.0.1...v1.0.2) (2022-09-18)
 
 ### 📦 Chores | 其他更新
