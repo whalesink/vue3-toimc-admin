@@ -16,5 +16,5 @@ module.exports = {
       'f-between': 'flex justify-between items-center'
     }
   },
-  plugins: [require('@tailwindcss/line-clamp')]
+  plugins: [require('@tailwindcss/line-clamp'), require('@tailwindcss/forms')]
 }

@@ -193,7 +193,7 @@
       @apply flex-col items-center justify-center;
 
       .addition {
-        @apply flex w-full justify-center text-sm font-light <xl:text-[12px];
+        @apply flex w-full justify-center text-sm font-light xl:text-[12px];
       }
 
       .c-day {
