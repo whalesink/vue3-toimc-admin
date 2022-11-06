@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full p-1 custom-login">
+  <div class="w-full p-4 custom-login">
     <div class="flex items-center justify-end">
       <div class="px-3 py-2 rounded-md mr-2 flex items-center bg-[#ECFAF3]">
         <span class="we inline-block pr-2 bg-contain"></span>

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full p-1 custom-login">
+  <div class="w-full p-4 custom-login">
     <!-- 右上角扫码部分，若不需要，可直接注销 -->
     <div class="flex items-center justify-end">
       <div class="px-3 py-2 rounded-md mr-2 flex items-center bg-[#ECFAF3]">
@@ -21,7 +21,7 @@
               <el-button
                 type="primary"
                 size="large"
-                class="w-full"
+                class="w-full mb-2"
                 @click="handleLogin(validate, model, 'pwd')"
                 >登录
               </el-button>
@@ -57,7 +57,7 @@
               <el-button
                 type="primary"
                 size="large"
-                class="w-full"
+                class="w-full mb-2"
                 @click="handleLogin(validate, model, 'code')"
                 >登录
               </el-button>

@@ -1,5 +1,5 @@
 <template>
-  <div class="p-1">
+  <div class="p-4">
     <el-select v-model="province" placeholder="请选择省份" class="mr-1" :clearable="clearable">
       <el-option
         v-for="item in tmplists"

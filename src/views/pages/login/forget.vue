@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full p-1 custom-login">
+  <div class="w-full p-4 custom-login">
     <!-- 右上角扫码登陆部分，若不需要，可直接注释 -->
     <div class="flex items-center justify-end">
       <div class="px-3 py-2 rounded-md mr-2 flex items-center bg-[#ECFAF3]">
@@ -15,7 +15,7 @@
       <div class="text-3xl pb-6">忘记密码</div>
       <basic-form ref="form" :schemas="regForm" label-width="0" class="pt-4" @change="handleChange">
         <template #action>
-          <el-button type="primary" size="large" class="w-full">重置密码</el-button>
+          <el-button type="primary" size="large" class="w-full mb-2">重置密码</el-button>
         </template>
         <template #suffix>
           <el-link
