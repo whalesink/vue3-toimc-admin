@@ -1,5 +1,13 @@
 # Change Logs | 更新历史
 
+## [1.2.0](https://github.com/toimc-team/vue-toimc-admin/compare/v1.1.0...v1.2.0) (2022-12-21)
+
+### ♻ Code Refactoring | 代码重构
+
+- github actions pnpm version update ([66452bc](https://github.com/toimc-team/vue-toimc-admin/commit/66452bc8c25a4a9c8b7bc7b9640c557f94ab32b4))
+- login & reg page ([e24292b](https://github.com/toimc-team/vue-toimc-admin/commit/e24292b06ae2978aaf15a97a49e2a3e6abca4a3f))
+- package update, vite4 is out ([d2ee497](https://github.com/toimc-team/vue-toimc-admin/commit/d2ee497af4b8cf3e17192560729221dff9b840f2))
+
 ## [1.1.0](https://github.com/toimc-team/vue-toimc-admin/compare/v1.0.1...v1.1.0) (2022-11-06)
 
 ### ✨ Features | 新功能
