@@ -191,7 +191,7 @@ export default defineConfig(({ mode, command }: ConfigEnv): UserConfig => {
       globals: true,
       environment: 'happy-dom',
       include: ['**/*.spec.(ts|tsx)', '**/*.test.(ts|tsx)'],
-      exclude: ['dist/**', 'build/**', 'mock/**', 'public'],
+      exclude: ['dist/**', 'build/**', 'mock/**', 'public', '**/node_modules/**'],
       deps: {
         inline: ['vue', 'vue-router', 'vuex', 'axios', 'element-plus']
       }

@@ -67,7 +67,7 @@
 
 <script lang="ts">
   import { defineComponent } from 'vue'
-  import { CropendResult, Cropper } from '@/components/Cropper/typing'
+  import { CropendResult, Cropper } from '@/components/Cropper/types'
   import img from '@/assets/images/brian.jpg'
   export default defineComponent({
     setup() {
