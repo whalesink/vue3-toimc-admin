@@ -1,0 +1,69 @@
+name: Sync to thin
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          repository: ${{ github.repository }}
+          ref: main    
+
+      - name: Sync code to thin repo
+        run: |
+          # 目标仓库地址
+          thin_repo="idxiu/vue3-toimc-admin-thin"
+          # 设置忽略文件列表
+          ignore_files=(
+            "slim"
+            "ssh-key"
+            ".git"
+            ".github"
+            ".husky"
+            ".vscode"  
+            "README.md" 
+            "README-zh_CN.md"
+            "CHANGELOG.md"
+            "src/views/components"
+            "auto-imports.d.ts"
+          )
+          ignore_string=""
+          # Generate ignore string for rsync
+          for file in "${ignore_files[@]}"; do
+            ignore_string+="--exclude=$file "
+          done
+
+          # Set Git user
+          git config --global user.email "idxiu.cn@gmail.com"
+          git config --global user.name "idxiu"
+
+          # Set up ssh key
+          echo "${{ secrets.ACTION_SYNC_KEY }}" > ssh-key
+          chmod 600 ssh-key
+          eval "$(ssh-agent -s)"
+          ssh-add ssh-key 
+
+          # Clone 目标仓库
+          git clone https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/$thin_repo slim
+
+          # 同步到目标仓库
+          rsync -av --delete $ignore_string . slim
+          # 提交推送改变文件至目标仓库
+          cd slim 
+          # 添加所有文件
+          git add -A
+          # 提交所有文件
+          git commit -m "Sync code from source repo"
+          # 推送文件到远程仓库
+          git push 
+
+
+
+# ACTION_SYNC_KEY ssh 私钥
+# SYNC_TOKEN token
+
